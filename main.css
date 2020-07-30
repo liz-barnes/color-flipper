@@ -1,7 +1,9 @@
-body {
+.home-page {
   background-image: url(https://ae01.alicdn.com/kf/HTB15qoLyhSYBuNjSspjxh473VXaz/Laeacco-Oil-Painting-Colorful-Cloud-Portrait-Scene-Photography-Backgrounds-Customized-Photographic-Backdrops-For-Photo-Studio.jpeg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  height: 700px;
 }
 
 #btn-container {
