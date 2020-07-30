@@ -37,4 +37,29 @@ const colors = [
     colorName: 'Alice Blue',
     hexCode: '#f0f8ff',
   },
-]
+];
+
+const colorRandomizer = () => {
+  return colors[Math.floor(Math.random() * colors.length)];
+};
+
+const chosenColor = () => {
+  const randomColor = colorRandomizer();
+  document.body.style.backgroundColor = randomColor.hexCode;
+
+  document.getElementById(
+    "chosenBackgroundColor"
+  ).innerHTML = `Background Color: ${randomColor.colorName} ${randomColor.hexCode}`;
+};
+
+const hexBtnClick = () => {
+  document
+    .getElementById("hexBtn")
+    .addEventListener("click", chosenColor);
+};
+
+const init = () => {
+  hexBtnClick();
+};
+
+init();
