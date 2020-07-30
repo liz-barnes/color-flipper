@@ -3,3 +3,7 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+#btn-container {
+  margin: 250px 0px;
+}
