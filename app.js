@@ -43,76 +43,23 @@ const colorRandomizer = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
-const colorSelector = () => {
+const chosenColor = () => {
   const randomColor = colorRandomizer();
-  document.body.style.backgroundColor = randomColor.hex;
+  document.body.style.backgroundColor = randomColor.hexCode;
 
   document.getElementById(
-    "color-indicator"
-  ).innerHTML = `${randomColor.name} ${randomColor.hex}`;
+    "chosenBackgroundColor"
+  ).innerHTML = `Background Color: ${randomColor.colorName} ${randomColor.hexCode}`;
 };
 
-const buttonClick = () => {
+const hexBtnClick = () => {
   document
-    .getElementById("simpleButton")
-    .addEventListener("click", colorSelector);
+    .getElementById("hexBtn")
+    .addEventListener("click", chosenColor);
 };
-
-
 
 const init = () => {
-  buttonClick();
-  
+  hexBtnClick();
 };
 
 init();
-
-
-
-
-
-const handleButtonClick = () => {
-
-  const colorFlipper = (array) => {
-  return array[Math.floor(Math.random() * array.length)].hexCode;
-}
-
-  document.querySelector('body').style.backgroundColor = `#${colorFlipper(colorArraySimple)}`;
-}
-
-
-const buttonEvents = () => {
-  document.querySelector('#click-btn').addEventListener('click', handleButtonClick)
-}
-
-buttonEvents();
-
-
-
-const printToDom = (divID, textToPrint) => {
-  const selectedDiv = document.getElementById(divID);
-  selectedDiv.innerHTML = textToPrint;
-}
-
-const addColorNameToPage = (color) => {
-
-  const textToPrint = `<div>Chosen Color: ${color}</div>`;
-  console.log(textToPrint);
-  printToDom('colorName', textToPrint);
-}
-
-const handleButtonClick = e => {
-  const buttonId = e.target.id;
-  const randomNum = Math.floor(Math.random() * Math.floor(10));
-  const chosenColor = colors[randomNum];
-  addColorNameToPage(chosenColor);
-  const bodySelector = (document.querySelector(
-      'body'
-  ).style.backgroundColor = chosenColor);
-};
-
-const buttonEvents = () => {
-  document.querySelector('#myBtn').addEventListener('click', handleButtonClick);
-};
-
-buttonEvents();

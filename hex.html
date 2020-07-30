@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="main.css" rel="stylesheet">
 </head>
-<body class="home-page">
+<body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light pl-5">
     <a class="navbar-brand" href="index.html">Color Flipper</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,18 +19,16 @@
         <li class="nav-item">
           <a class="nav-link" href="simple.html">Simple</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="hex.html">Hex</a>
         </li>
       </ul>
-      
     </div>
   </nav>
-
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Welcome to Color Flipper!</h1>
-      <p class="lead" style="width: 75%;">Color Flipper is a tool that allows a user to change the background of the page by a click of button. We have two modes: Simple and Hex. Head to the navigation bar and let's get clicking!</p>
+  <div class="color-display">
+    <div id="chosenBackgroundColor"></div>
+    <div class="d-flex justify-content-center" id="btn-container">
+    <button type="button" class="btn btn-outline-dark" id="hexBtn">Click Me!</button>
     </div>
   </div>
 
