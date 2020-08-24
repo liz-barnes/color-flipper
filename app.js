@@ -3,7 +3,7 @@
 const colors = [
   {
     colorName: 'Peru',
-    hexCode: '#cd853f',
+    hexCode: '#CD853F',
   },
   {
     colorName: 'Olive',
@@ -11,31 +11,31 @@ const colors = [
   },
   {
     colorName: 'Cadet Blue',
-    hexCode: '#5f9ea0',
+    hexCode: '#5F9EA0',
   },
   {
     colorName: 'Lavender Blush',
-    hexCode: '#fff0f5',
+    hexCode: '#FFF0F5',
   },
   {
     colorName: 'Peach Puff',
-    hexCode: '#ffdab9',
+    hexCode: '#FFDAB9',
   },
   {
     colorName: 'Thistle',
-    hexCode: '#d8bfd8',
+    hexCode: '#D8BFD8',
   },
   {
     colorName: 'Rosy Brown',
-    hexCode: '#bc8f8f',
+    hexCode: '#BC8F8F',
   },
   {
     colorName: 'Sienna',
-    hexCode: '#a0522d ',
+    hexCode: '#A0522D ',
   },
   {
     colorName: 'Alice Blue',
-    hexCode: '#f0f8ff',
+    hexCode: '#F0F8FF',
   },
 ];
 
@@ -58,8 +58,15 @@ const hexBtnClick = () => {
     .addEventListener("click", chosenColor);
 };
 
+const simpleBtnClink = () => {
+  document
+    .getElementById("simpleBtn")
+    .addEventListener("click", chosenColor);
+}
+
 const init = () => {
   hexBtnClick();
+  simpleBtnClink();
 };
 
 init();
